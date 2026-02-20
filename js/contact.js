@@ -6,7 +6,7 @@ function renderContactCards() {
   contactCardsContainer.innerHTML = contactData
     .map((contact) => {
       const isEmail = contact.link.startsWith("mailto:");
-      const cardStyle = `text-decoration: none;${isEmail ? " display: block; pointer-events: none;" : ""}`;
+      const cardStyle = `text-decoration: none;${isEmail ? " display: block;" : ""}`;
       const targetAttr = isEmail ? "" : 'target="_blank" rel="noopener"';
 
       return `
