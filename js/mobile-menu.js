@@ -1,33 +1,32 @@
 // Mobile menu functionality
 function initMobileMenu() {
     const hamburgerMenu = document.getElementById('hamburgerMenu');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
+    const menuGrid = document.querySelector('.mobile-menu-grid');
+
     function toggleMobileMenu() {
-        if (mobileMenu) {
-            mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+        if (menuGrid) {
+            menuGrid.classList.toggle('menu-grid-open');
         }
     }
-    
+
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener('click', toggleMobileMenu);
     }
-    
+
     const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');
     mobileMenuItems.forEach(item => {
         item.addEventListener('click', () => {
-            if (mobileMenu) {
-                mobileMenu.style.display = 'none';
+            if (menuGrid) {
+                menuGrid.classList.remove('menu-grid-open');
             }
         });
     });
-    
+
     document.addEventListener('click', (event) => {
-        if (mobileMenu && mobileMenu.style.display === 'block') {
-            if (hamburgerMenu && !hamburgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
-                mobileMenu.style.display = 'none';
+        if (menuGrid && menuGrid.classList.contains('menu-grid-open')) {
+            if (hamburgerMenu && !hamburgerMenu.contains(event.target) && !menuGrid.contains(event.target)) {
+                menuGrid.classList.remove('menu-grid-open');
             }
         }
     });
 }
-
