@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Ali - طراح و توسعه‌دهنده وب</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="icon/user.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container nav">
+        <button
+          class="hamburger-menu"
+          id="hamburgerMenu"
+          aria-label="نمایش منوی موبایل"
+        >
+          <img src="icon/hamburer-menu.svg" width="24" height="24" alt="منو" />
+        </button>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about" class="nav-link" data-scroll>درباره من</a>
+          <a href="#skills" class="nav-link" data-scroll>مهارت‌ها</a>
+          <a href="#projects" class="nav-link" data-scroll>پروژه‌ها</a>
+          <a href="#contact" class="nav-link" data-scroll>ارتباط</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="تغییر حالت تاریک/روشن"
+          title="تغییر تم"
+        >
+          <img
+            class="icon-sun"
+            src="icon/light-mode.svg"
+            width="20"
+            height="20"
+            alt="حالت روشن"
+          />
+          <img
+            class="icon-moon"
+            src="icon/dark-mode.svg"
+            width="20"
+            height="20"
+            alt="حالت تاریک"
+          />
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-grid">
+          <a href="#about" data-scroll class="mobile-menu-item">درباره من</a>
+          <a href="#skills" data-scroll class="mobile-menu-item">مهارت‌ها</a>
+          <a href="#projects" data-scroll class="mobile-menu-item">پروژه‌ها</a>
+          <a href="#contact" data-scroll class="mobile-menu-item">ارتباط</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section
+        style="max-width: 1100px; margin: 0 auto; direction: rtl"
+        id="home"
+      >
+        <div class="container hero">
+          <div class="intro-text">
+            <h1 class="intro-line">سلام</h1>
+            <h1 class="intro-line name-animated">من علی هستم</h1>
+            <h1 class="intro-line">طراح وب !</h1>
+          </div>
+          <div class="user-avatar">
+            <img src="icon/user-circle.svg" alt="Ali" class="user-circle" />
+          </div>
+        </div>
+      </section>
+      <hr />
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                من علی هستم؛ یک طراح وب ۱۷ ساله با علاقه به طراحی و توسعه وب.
+                تسلط خوبی بر HTML و CSS دارم و از ساخت رابط‌های کاربری تمیز،
+                مدرن و کاربرپسند لذت می‌برم. همیشه در حال یادگیری و ارتقای
+                مهارت‌هایم در دنیای توسعه وب هستم و به‌طور منظم از ابزارهای هوش
+                مصنوعی برای آشنایی با فریم‌ورک‌های JavaScript و مفاهیم بک‌اند
+                استفاده می‌کنم. علاوه بر این، توانایی کار با WordPress را دارم و
+                می‌توانم سایت‌های وردپرسی را راه‌اندازی، شخصی‌سازی و با
+                طراحی‌های اختصاصی و بهینه پیاده‌سازی کنم. هدف من ساخت
+                وب‌سایت‌هایی است که هم از نظر ظاهری جذاب باشند و هم عملکردی سریع
+                و حرفه‌ای داشته باشند.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+
+      <!-- Skills Section -->
+      <section id="skills">
+        <div class="container">
+          <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+      </section>
+      <hr />
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects">
+        <div class="container">
+          <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Project Preview Modal -->
+      <div class="project-modal-overlay" id="projectModal" aria-hidden="true">
+        <div class="project-modal">
+          <button
+            class="project-modal-close"
+            id="projectModalClose"
+            aria-label="بستن پیش‌نمایش"
+          >
+            <img src="icon/cross.svg" alt="بستن" />
+          </button>
+          <div class="project-modal-header">
+            <div class="project-modal-title" id="projectModalTitle">
+              عنوان پروژه
+            </div>
+            <div class="project-modal-sub" id="projectModalSub">
+              جزئیات و توضیحات پروژه اینجا نمایش داده می‌شود.
+            </div>
+            <div class="project-modal-devices">
+              <button
+                class="device-btn active"
+                data-device="mobile"
+                title="موبایل"
+              >
+                <img src="icon/mobile.svg" alt="موبایل" />
+                <span>موبایل</span>
+              </button>
+              <button class="device-btn" data-device="tablet" title="تبلت">
+                <img src="icon/tablet.svg" alt="تبلت" />
+                <span>تبلت</span>
+              </button>
+              <button class="device-btn" data-device="desktop" title="دسکتاپ">
+                <img src="icon/desktop.svg" alt="دسکتاپ" />
+                <span>دسکتاپ</span>
+              </button>
+            </div>
+          </div>
+          <div class="project-modal-body">
+            <div class="device-stage" id="deviceStage">
+              <div class="device-frame">
+                <iframe
+                  id="projectFrame"
+                  title="پیش‌نمایش پروژه"
+                  src="about:blank"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <!-- Contact Cards -->
+          <div class="contact-cards" id="contactCards">
+            <!-- Contact cards will be rendered by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-center">
+        <div class="footer-brand">A-SITE</div>
+      </div>
+    </footer>
+
+    <!-- Scripts - Load in order -->
+    <script src="js/utils.js"></script>
+    <script src="js/data/skills-data.js"></script>
+    <script src="js/data/projects-data.js"></script>
+    <script src="js/data/contact-data.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

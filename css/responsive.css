@@ -1,0 +1,128 @@
+/* Responsive Design - Handle responsiveness yourself */
+
+/* Header Responsive Styles */
+/* 700px and above: No changes - header works as normal */
+/* 699px and below: Hide nav links, show hamburger menu */
+
+@media (max-width: 699px) {
+  /* Hide navigation links */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: block !important;
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+  }
+
+  /* Keep all 5 mobile menu links in one row */
+  .mobile-menu-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
+  .mobile-menu-item {
+    padding: 8px 4px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Home Section Responsive Styles */
+/* 610px and above: No changes - home section works as normal */
+/* 609px and below: Make elements a little bit smaller */
+
+@media (max-width: 609px) {
+  /* Reduce intro text font size */
+  .intro-line {
+    font-size: 32px !important;
+  }
+
+  /* Reduce user avatar size */
+  .user-circle {
+    width: 180px !important;
+    height: 180px !important;
+  }
+}
+
+/* Home Section - Extra Small Screens */
+/* 420px and below: Make elements even smaller */
+
+@media (max-width: 420px) {
+  /* Further reduce intro text font size */
+  .intro-line {
+    font-size: 24px !important;
+  }
+
+  /* Further reduce user avatar size */
+  .user-circle {
+    width: 140px !important;
+    height: 140px !important;
+  }
+}
+
+/* About Section Responsive Styles */
+/* 620px and above: No changes - about section works as normal */
+/* 619px and below: Stack vertically and center align text */
+
+@media (max-width: 619px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-text p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+/* Skills Section Responsive Styles */
+/* Desktop: 3 skills per row (default) */
+/* Tablet: 2 skills per row */
+/* Mobile: 1 skill per row */
+
+/* Tablet: 2 skills per row */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 skill per row */
+@media (max-width: 767px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Projects Section Responsive Styles */
+/* Desktop: max 3 cards per row (default in projects.css) */
+/* Tablet: 2 cards per row */
+/* Mobile: 1 card per row */
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact Section Responsive Styles */
+@media (max-width: 768px) {
+  .contact-cards {
+    gap: 1.5rem;
+  }
+}

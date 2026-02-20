@@ -1,0 +1,73 @@
+/* Contact Section */
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.contact-card {
+  flex: 1 1 240px;
+  padding: 10px 20px;
+  background: var(--surface);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-xl);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease !important;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.contact-icon img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  transition: all 0.3s ease !important;
+}
+
+.contact-card:hover .contact-icon img {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  word-break: break-all;
+  direction: ltr;
+}
+
+/* Invert GitHub SVG colors in dark mode */
+:root.dark .contact-card:first-child .contact-icon img {
+  filter: invert(1);
+}
